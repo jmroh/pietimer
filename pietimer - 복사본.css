@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+html, body {
+    overflow: hidden;
+    background-color: #ecf0f1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.title {
+    top:15%;
+    position: absolute;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.clock-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 50px 50px 50px;
+    background-color: white;
+}
+
+.clock-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.knob {
+    position:absolute;
+    top:85px;
+    left:85px;
+    width:30px;
+    height:30px;
+    background-color:#ecf0f1;  
+    border-radius: 50% 50% 50% 50%; 
+    z-index:10;
+}
+
+.dial-container-12 {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    width: 10px;
+    height: 230px;
+}
+
+.dial12 {
+    width: 10px;
+    height: 10px;
+    background-color: #ecf0f1;
+}
+
+.clock {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 0px 0px 0px 0px;  
+    background-color: white;
+}
+
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px 100% 100% 100px; 
+}
+
+.circle .circle-left {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    width: 100px;
+    height: 200px;
+    background-color: #3498db;  
+    border-radius: 100px 0% 0% 100px;  
+}
+.circle .circle-right {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    width: 100px;
+    height: 200px;
+    background-color: white;
+    border-radius: 0px 100px 100px 0px
+}
+
+.pie-mask {
+    position: absolute;
+    top: 0px; 
+    left: 100px;
+    width: 100px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 0px 100px 100px 0px;  
+}
+
+@keyframes moveHands{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.circle {
+    animation: moveHands 60s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveMask{
+    50% {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 101px;
+        height: 201px;
+        background-color: white;
+        border-radius: 0px 0px 0px 0px;  
+    }
+    to {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 101px;
+        height: 201px;
+        background-color: white;
+        border-radius: 0px 0px 0px 0px;  
+    }
+}
+
+.pie-mask {
+    animation: moveMask 60s step-end forwards;
+    animation-iteration-count: infinite;
+}
