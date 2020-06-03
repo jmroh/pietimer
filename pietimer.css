@@ -119,7 +119,7 @@ html, body {
 }
 
 .circle {
-    animation: moveHands 60s linear forwards;
+    animation: moveHands 300s linear forwards;
     animation-iteration-count: infinite;
 }
 
@@ -145,6 +145,6 @@ html, body {
 }
 
 .pie-mask {
-    animation: moveMask 60s step-end forwards;
+    animation: moveMask 300s step-end forwards;
     animation-iteration-count: infinite;
 }
